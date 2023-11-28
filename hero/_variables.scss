@@ -1,0 +1,39 @@
+////////////////////////////////////////////////
+// HERO
+////////////////////////////////////////////////
+$grey-darker: #1f2d3b;
+$grey-dark: #2b3e50;
+$grey: #4e5d6c;
+$grey-light: #8694a4;
+$grey-lighter: #dee5ed;
+
+$teal: #008080;
+$orange: #df691a;
+$yellow: #f0ad4e;
+$green: #5cb85c;
+$blue: #5bc0de;
+$red: #d9534f;
+
+$primary: $teal !default;
+
+$light: lighten($grey-light, 3);
+$dark: darken($grey-dark, 3);
+
+$title-color: $grey-darker;
+$title-weight: 400;
+$subtitle-strong-color: $grey-darker;
+$subtitle-color: lighten($grey-darker, 10);
+$subtitle-strong-color: lighten($grey-darker, 10);
+
+$background: $grey-light;
+$body-background-color: $grey-lighter;
+$footer-background-color: $background;
+
+$border: $grey;
+
+$family-sans-serif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$navbar-item-active-color: $primary;
+$navbar-item-hover-background-color: transparent;
+
+$vegeta-import-font: true !default;
