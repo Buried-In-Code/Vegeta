@@ -35,7 +35,7 @@
   },
   "scripts": {
     "prod": "gulp build",
-    "dev": "gulp",
+    "dev": "gulp"
   },
   "engines": {
     "node": ">=18.16"
