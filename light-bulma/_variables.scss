@@ -1,0 +1,143 @@
+@charset "utf-8";
+////////////////////////////////////////////////
+// DARK BULMA
+////////////////////////////////////////////////
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap');
+
+//###################################
+// Fonts
+//###################################
+
+$family-primary: "Carrois Gothic", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$button-font: "Carrois Gothic SC", $family-primary;
+
+$button-family: $button-font;
+$title-family: $family-primary;
+$subtitle-family: $family-primary;
+
+//###################################
+// Pallete
+//###################################
+
+$custom-red: #D95757;
+$custom-green: #AAD94C;
+$custom-yellow: #E6B450;
+$custom-blue: #59C2FF;
+$custom-purple: #D2A6FF;
+$custom-cyan: #39BAE6;
+$custom-orange: #FF8F40;
+$custom-teal: #008080;
+$custom-black: #0B0E14;
+$custom-grey: #ACB6BF;
+$custom-white: #BFBDB6;
+
+//###################################
+
+@function normalize-colour($colour){
+  @if (lightness($colour) < 40 and lightness($colour) > 25){
+    @return $colour;
+  }
+  @if (lightness($colour) >= 40){
+    @return change-color($colour, $lightness: 40%);
+  }
+  @return change-color($colour, $lightness: 25%);
+}
+
+@function darken-colour($colour){
+  @return change-color($colour, $lightness: 20%);
+}
+
+@function lighten-colour($colour){
+  @return change-color($colour, $lightness: 80%);
+}
+
+$black: $custom-white;
+$black-bis: darken($black, 5%);
+$black-ter: darken($black-bis, 5%);
+$grey: $custom-grey;
+$grey-dark: lighten($grey, 5%);
+$grey-darker: lighten($grey-dark, 5%);
+$grey-light: darken($grey, 5%);
+$grey-lighter: darken($grey-light, 5%);
+$white: $custom-black;
+$white-bis: lighten($white, 5%);
+$white-ter: lighten($white-bis, 5%);
+$orange: $custom-orange;
+$yellow: $custom-yellow;
+$green: $custom-green;
+$turquoise: $custom-teal;
+$cyan: $custom-cyan;
+$blue: $custom-blue;
+$purple: $custom-purple;
+$red: $custom-red;
+
+$primary: normalize-colour($custom-teal);
+$primary-dark: lighten-colour($primary);
+$primary-light: darken-colour($primary);
+$info: normalize-colour($yellow);
+$info-dark: lighten-colour($info);
+$info-light: darken-colour($info);
+$success: normalize-colour($green);
+$success-dark: lighten-colour($success);
+$success-light: darken-colour($success);
+$warning: normalize-colour($orange);
+$warning-dark: lighten-colour($warning);
+$warning-light: darken-colour($warning);
+$danger: normalize-colour($red);
+$danger-dark: lighten-colour($danger);
+$danger-light: darken-colour($danger);
+$light: $grey-lighter;
+$dark: $grey-darker;
+$scheme-main: $black;
+$scheme-main-bis: $black-bis;
+$scheme-main-ter: $black-ter;
+$scheme-invert: $white;
+$scheme-invert-bis: $white-bis;
+$scheme-invert-ter: $white-ter;
+$background: $scheme-main;
+// $border: $grey-lighter;
+$border: $grey-darker;
+// $border-hover: $grey-light;
+$border-hover: $grey-dark;
+// $border-light: $grey-lightest;
+// $border-light-hover: $grey-light;
+$text: $white-bis;
+$text-light: $white-ter;
+$text-strong: $white;
+// $code: darken($red, 15%);
+// $code-background: $background;
+// $pre: $text;
+// $pre-background: $background;
+$link: normalize-colour($blue);
+$link-dark: lighten-colour($link);
+$link-light: darken-colour($link);
+// $link-visited: $purple;
+$link-hover: lighten($link, 5%);
+$link-hover-border: lighten($link, 5%);
+$link-focus: darken($link, 5%);
+$link-focus-border: darken($link, 5%);
+$link-active: lighten($link, 5%);
+$link-active-border: lighten($link, 5%);
+
+// Box
+$box-background-color: $black-ter;
+
+// Card
+$card-background-color: $black-ter;
+
+// Modal
+$modal-background-background-color: change-color($scheme-main, $alpha: 0.85);
+
+// Title
+$title-color: $primary-light;
+$subtitle-color: $primary;
+
+// Table
+$table-background-color: $black-ter;
+
+//###################################
+// Sizes
+//###################################
+
+$footer-padding: 1.5rem;
