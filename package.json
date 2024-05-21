@@ -23,7 +23,7 @@
     "themes"
   ],
   "devDependencies": {
-    "bulma": "0.9.4",
+    "bulma": "1.0.1",
     "del": "^7.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^9.0.0",
