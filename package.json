@@ -1,6 +1,6 @@
 {
   "name": "vegeta",
-  "version": "0.9.4",
+  "version": "0.1.0",
   "description": "Themes for Bulma",
   "author": "Jonah Jackson <BuriedInCode@tuta.io>",
   "exports": "./villain/vegeta.min.css",
