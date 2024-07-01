@@ -1,43 +1,19 @@
 {
   "name": "vegeta",
-  "version": "0.9.4",
-  "description": "Themes for Bulma",
-  "author": "Jonah Jackson <BuriedInCode@tuta.io>",
-  "exports": "./villain/vegeta.min.css",
+  "version": "0.2.0",
   "type": "module",
-  "homepage": "https://github.com/Buried-In-Code/Vegeta",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Buried-In-Code/Vegeta.git"
+  "dependencies": {
+    "bulma": "^1.0.1",
+    "sass": "^1.77.6"
   },
-  "bugs": {
-    "url": "https://github.com/Buried-In-Code/Vegeta/issues"
-  },
-  "license": "MIT",
-  "keywords": [
-    "css",
-    "sass",
-    "flexbox",
-    "responsive",
-    "framework",
-    "themes"
-  ],
   "devDependencies": {
-    "bulma": "0.9.4",
-    "del": "^7.1.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^9.0.0",
-    "gulp-csso": "^4.0.1",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "node-sass": "^9.0.0"
+    "cssnano": "^6.1.0",
+    "postcss-cli": "^11.0.0",
+    "prettier": "^3.2.5"
   },
   "scripts": {
-    "prod": "gulp build",
-    "dev": "gulp"
-  },
-  "engines": {
-    "node": ">=18.16"
+    "deploy": "npm run build && npm run minify",
+    "build": "sass --load-path=./node_modules/ vegeta.scss css/vegeta.css",
+    "minify": "postcss css/vegeta.css --no-map --output css/vegeta.min.css --use cssnano"
   }
 }

@@ -1,0 +1,19 @@
+@use "bulma/sass/utilities/css-variables" as cv;
+
+@use "bulma/sass/themes/setup";
+@use "bulma/sass/themes/light";
+
+$primary-light: #008080;
+
+@mixin hero-theme-config {
+  @include light.light-theme;
+
+  @include cv.register-hsl("primary", $primary-light);
+  @include cv.generate-color-palette("primary", $primary-light);
+  @include cv.generate-on-scheme-colors("primary", $primary-light, light.$scheme-main);
+}
+
+@include cv.bulma-theme($name: "hero") {
+  @include hero-theme-config;
+  @include setup.setup-theme;
+}

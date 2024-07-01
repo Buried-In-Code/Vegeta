@@ -1,0 +1,19 @@
+@use "bulma/sass/utilities/css-variables" as cv;
+
+@use "bulma/sass/themes/setup";
+@use "bulma/sass/themes/dark";
+
+$primary-dark: #008080;
+
+@mixin villain-theme-config {
+  @include dark.dark-theme;
+
+  @include cv.register-hsl("primary", $primary-dark);
+  @include cv.generate-color-palette("primary", $primary-dark);
+  @include cv.generate-on-scheme-colors("primary", $primary-dark, dark.$scheme-main);
+}
+
+@include cv.bulma-theme($name: "villain") {
+  @include villain-theme-config;
+  @include setup.setup-theme;
+}
