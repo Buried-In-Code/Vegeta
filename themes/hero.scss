@@ -3,14 +3,24 @@
 @use "bulma/sass/themes/setup";
 @use "bulma/sass/themes/light";
 
-$primary-light: #008080;
+$colours: (
+  "text": #BFBFBF,    // Grey
+  "link": #800080,    // Magenta
+  "primary": #008080, // Teal
+  "info": #000080,    // Blue
+  "success": #008000, // Green
+  "warning": #805500, // Orange
+  "danger": #800000   // Red
+);
 
 @mixin hero-theme-config {
   @include light.light-theme;
 
-  @include cv.register-hsl("primary", $primary-light);
-  @include cv.generate-color-palette("primary", $primary-light);
-  @include cv.generate-on-scheme-colors("primary", $primary-light, light.$scheme-main);
+  @each $name, $value in $colours {
+    @include cv.register-hsl($name, $value);
+    @include cv.generate-color-palette($name, $value);
+    @include cv.generate-on-scheme-colors($name, $value, light.$scheme-main);
+  }
 }
 
 @include cv.bulma-theme($name: "hero") {
