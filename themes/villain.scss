@@ -3,14 +3,24 @@
 @use "bulma/sass/themes/setup";
 @use "bulma/sass/themes/dark";
 
-$primary-dark: #008080;
+$colours: (
+  "text": #BFBFBF,    // Grey
+  "link": #000080,    // Purple
+  "primary": #008080, // Teal
+  "info": #800080,    // Magenta
+  "success": #008000, // Green
+  "warning": #805500, // Orange
+  "danger": #800000   // Red
+);
 
 @mixin villain-theme-config {
   @include dark.dark-theme;
 
-  @include cv.register-hsl("primary", $primary-dark);
-  @include cv.generate-color-palette("primary", $primary-dark);
-  @include cv.generate-on-scheme-colors("primary", $primary-dark, dark.$scheme-main);
+  @each $name, $value in $colours {
+    @include cv.register-hsl($name, $value);
+    @include cv.generate-color-palette($name, $value);
+    @include cv.generate-on-scheme-colors($name, $value, dark.$scheme-main);
+  }
 }
 
 @include cv.bulma-theme($name: "villain") {
