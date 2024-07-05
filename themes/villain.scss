@@ -4,13 +4,13 @@
 @use "bulma/sass/themes/dark";
 
 $colours: (
-  "text": #B3B3B3,    // Grey
-  "link": #990099,    // Magenta
-  "primary": #009999, // Teal
-  "info": #000099,    // Blue
-  "success": #009900, // Green
-  "warning": #999900, // Yellow
-  "danger": #990000   // Red
+  "text": #BFBFBF,    // Grey
+  "link": #FF80FF,    // Magenta
+  "primary": #80FFFF, // Teal
+  "info": #8080FF,    // Blue
+  "success": #80FF80, // Green
+  "warning": #FFFF80, // Yellow
+  "danger": #FF8080   // Red
 );
 
 @mixin villain-theme-config {
