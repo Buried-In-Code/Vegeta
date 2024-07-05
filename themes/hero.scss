@@ -4,13 +4,13 @@
 @use "bulma/sass/themes/light";
 
 $colours: (
-  "text": #4D4D4D,    // Grey
-  "link": #990099,    // Magenta
-  "primary": #009999, // Teal
-  "info": #000099,    // Blue
-  "success": #009900, // Green
-  "warning": #999900, // Yellow
-  "danger": #990000   // Red
+  "text": #666666,    // Grey
+  "link": #CC00CC,    // Magenta
+  "primary": #008080, // Teal
+  "info": #0000CC,    // Blue
+  "success": #00CC00, // Green
+  "warning": #CCCC00, // Yellow
+  "danger": #CC0000   // Red
 );
 
 @mixin hero-theme-config {
