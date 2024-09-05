@@ -7,7 +7,7 @@
     "sass": "^1.78.0"
   },
   "devDependencies": {
-    "cssnano": "^7.0.5",
+    "cssnano": "^7.0.6",
     "postcss-cli": "^11.0.0",
     "prettier": "^3.3.3"
   },
