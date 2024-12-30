@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "type": "module",
   "dependencies": {
-    "bulma": "^1.0.2",
+    "bulma": "^1.0.3",
     "sass": "^1.83.0"
   },
   "devDependencies": {
