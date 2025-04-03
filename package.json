@@ -4,7 +4,7 @@
   "type": "module",
   "dependencies": {
     "bulma": "^1.0.3",
-    "sass": "^1.86.1"
+    "sass": "^1.86.2"
   },
   "devDependencies": {
     "cssnano": "^7.0.6",
