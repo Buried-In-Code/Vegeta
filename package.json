@@ -9,7 +9,7 @@
   "devDependencies": {
     "cssnano": "^7.1.2",
     "postcss-cli": "^11.0.1",
-    "prettier": "^3.7.4"
+    "prettier": "^3.8.0"
   },
   "scripts": {
     "deploy": "npm run build && npm run minify",
