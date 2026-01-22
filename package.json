@@ -4,12 +4,12 @@
   "type": "module",
   "dependencies": {
     "bulma": "^1.0.4",
-    "sass": "^1.97.2"
+    "sass": "^1.97.3"
   },
   "devDependencies": {
     "cssnano": "^7.1.2",
     "postcss-cli": "^11.0.1",
-    "prettier": "^3.8.0"
+    "prettier": "^3.8.1"
   },
   "scripts": {
     "deploy": "npm run build && npm run minify",
